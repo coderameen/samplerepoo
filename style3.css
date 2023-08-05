@@ -1,0 +1,9 @@
+.head1{
+    color:cadetblue;
+    letter-spacing: 5px;
+    word-spacing: 10px;
+    direction:ltr; /* rtl */
+    text-indent: 10px;
+    text-align: center; /*left,right,center */
+    text-transform: lowercase;/* upper case */
+}

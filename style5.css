@@ -1,0 +1,7 @@
+.block{
+    background-color: chocolate;
+    /* border-width: 5px;
+    border-color:blue;
+    border-style: dashed; */ /*solid,dotted,dashed,groove */
+    border: 7px groove brown;
+}

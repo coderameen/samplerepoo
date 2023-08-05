@@ -1,0 +1,18 @@
+/* .block1{
+    background-color: aqua;
+    width: 25%;
+    height: 200px;
+    border:3px solid red;
+    padding-left: 10px;
+} */
+
+
+button{
+    /* margin-left:10px;
+    margin-top:10px; */
+
+    margin:20px;
+    padding:5px;
+    color:blue;
+    border:2px solid skyblue;
+}

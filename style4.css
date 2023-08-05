@@ -1,0 +1,17 @@
+.head1{
+    color:green;
+}
+
+button{
+    color:blue;
+    background-color: lightblue;
+}
+
+button:hover{
+    background-color: red;
+    color:white;
+}
+
+button:active{
+    color:green;
+}

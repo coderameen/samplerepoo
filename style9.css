@@ -1,0 +1,39 @@
+/*Relative: fixed current position */
+/*absolute: we can change the position to left,right, top, bottom  */
+.father{
+    width: 600px;
+    height: 300px;
+    background-color: lightblue;
+    position: relative;
+}
+.child1{
+    width: 100px;
+    height: 100px;
+    background-color: green;
+    position: absolute;
+    left: 0;
+}
+.child2{
+        width: 100px;
+        height: 100px;
+        background-color: tomato;
+        position:absolute;
+        right:0;
+
+    
+}
+.child3{
+    width: 100px;
+    height: 100px;
+    background-color: orange;
+    position: absolute;
+    bottom:0;
+    right: 0;
+}
+.child4{
+    width: 100px;
+    height: 100px;
+    background-color: pink;
+    position:absolute;
+    bottom: 0;
+}

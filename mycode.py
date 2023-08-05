@@ -1,4 +1,3 @@
-#I have changed the code - ameen hasan
 def my_sorted_function(original_id_ranges, excluded_id_ranges):
     ranges = []
     #original_ranges = [(150, 250), (2, 99), (200, 300), (50, 100)]

@@ -1,0 +1,28 @@
+
+*{
+    padding:o;
+    margin:0px;
+    box-sizing: border-box;
+}
+.bgimg{
+    
+    /* background-color: red; */
+    background-image: url('img.jpg');
+    background-repeat: no-repeat;
+    width: 100%;
+    height: 100vh;
+    background-size: 100% 100%;
+    /* background-attachment: fixed; */
+    
+}
+.bgimg2{
+    
+    /* background-color: red; */
+    background-image: url('img2.jpg');
+    background-repeat: no-repeat;
+    width: 100%;
+    height: 100vh;
+    background-size: 100% 100%;
+    /* background-attachment: fixed; */
+    
+}
