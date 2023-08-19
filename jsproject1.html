@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>F2C</title>
+</head>
+<body>
+    <center>
+        <div>
+            <h1>Convert Farenheit to Celcius </h1>
+            <hr>
+    
+            <input type="text" placeholder="Enter Farenheit value" id="fd"><br>
+            <br>
+            <button type="button" id="submitbtn">CONVERT</button>
+            <br>
+            <br>
+            <input type="text" placeholder="Degree in Celcius" id="cd">
+        </div>
+    </center>
+    <script>
+        function myfunc(){
+            var fv = document.getElementById('fd').value;
+            //°C = (°F - 32) × 5/9,
+            let cv = (fv - 32) * (5/9);
+            console.log(cv);
+            document.getElementById('cd').value = cv + "* Cel";
+        }
+        var btn = document.getElementById('submitbtn');
+        btn.addEventListener('click', myfunc)
+    </script>
+</body>
+</html>
