@@ -713,14 +713,150 @@ var fruits = ['Mango','banana','orange','Lemon']
 
 //push: it add the new element at last of array index
 
-var arr = [10,22,33,44,55]
-arr.push(100)
-document.write(arr)
+// var arr = [10,22,33,44,55]
+// arr.push(100)
+// document.write(arr)
 
 //POP: remove last element from array of last index
-var arr = [10,22,33,44,55]
-arr.pop()
-document.write(arr)
+// var arr = [10,22,33,44,55]
+// arr.pop()
+// document.write(arr)
+
+//Strings
+var str ="Hi Prajwal"
+// //lenght of string
+// document.write(str);
+// // document.write(str.lenght);
+// var len = str.length;
+// document.write(len);
+// console.log(str.length);
+
+//charAt(): str = "Hi Prajwal"
+// document.write(str.charAt(5));
+
+// //charCodeAt(index): return the unicode value of string alphabet 
+// document.write(str.charCodeAt(1));
+
+//toUpperCase()
+//toLowerCase()
+// document.write(str.toUpperCase())
+
+
+//trim(): alway return string by removing the white spaces both side of string
+// str = "        HElllo Prajwal                   ";
+// document.write(str);
+// document.write(str.trim());
+
+// console.log(str);
+
+
+
+//replace(oldstring, new_string)
+// var str2 = "Hell Alen";
+// document.write(str2)
+// document.write("<br>");
+// document.write(str2.replace("Alen","Bob"));
+
+
+//split(): break into seperate string
+// var str="Helle this is Javascript";
+// var arr = str.split(" ");
+// document.write(arr);
+
+
+// //indexOf()
+var str = "Hi Prajwal how is javascript";
+// document.write(str.indexOf('P'));//4
+// document.write(str.indexOf("Prajwal"));//4
+
+
+
+
+//search(): similar to indexOf
+// document.write(str.search('i') + "<br>");
+// document.write(str.search('Prajwal'));
+
+//slice(): IT Returns substing of the string
+//syntax: slice(start_index,end_index)
+// document.write(str.slice(3,10));
+
+//substr(): similar to slicke method
+//substr(star_index, lenght of string from start index)
+// document.write(str.substr(3,7))//Pra
+
+
+//NUMBER
+// var mobileno = 72987654345;
+// document.write(typeof(mobileno));//number
+// var mobileno = "72987654345";
+
+// var mobileno = "Hello";
+// document.write(typeof(mobileno));
+// document.write(isNaN(mobileno));//True
+
+
+// //infinity and - infinity
+// 5/0=> Infinity
+// -5/0 => - infinity
+
+// document.write(5/0);
+
+// document.write(-5/0);
+
+
+//Type casting: type conversion: to conver one string into another string
+
+//parseInt
+//parseFloat
+//parseString
+
+// var a ="10"
+// document.write(typeof(a));//string
+// var res = parseInt(a);
+// document.write(typeof(res));
+// document.write(parseFloat(a));
+
+//Math property in JS: using Math we can find max, min, floor, round(), random
+
+// document.write(Math.min(50,20,55,7,88)  + "<br>");
+// document.write(Math.max(50,20,55,7,88));
+
+
+// document.write(Math.floor(2.37));//2
+// document.write(Math.floor(6.89))//6
+// document.write(Math.floor(-2.23))//-3
+
+
+// document.write(Math.round(2.37));//2
+// document.write(Math.round(6.89))//7
+// document.write(Math.round(-2.23))//-2
+
+//to generate random number using math
+
+
+// document.write(Math.round(Math.random()*100));
+
+
+//Date and time in JS
+
+// var mydate = new Date();
+// document.write(mydate);
+
+
+//DOM(Document Object Model):It is an API used to manipulate node/data in HTML or XML
+
+
+
+//Element Access Methods
+/*
+1. document.getElementById()
+2. document.getElementByTagName()
+3. document.getElementByClassName()
+4.document.querySelector()
+5.document.querySelectorAll()
+*/
+
+
 </script>
 </body>
 </html>
