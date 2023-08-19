@@ -1,0 +1,217 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>cat shop</title>
+</head>
+<body>
+
+
+
+    <!-- <script>
+        //DOM(Document Object Model):It is an API used to manipulate node/data in HTML or XML
+        //Element Access Methods
+        /*
+        1. document.getElementById()
+        2. document.getElementByTagName()
+        3. document.getElementsByClassName()
+        4.document.querySelector()
+        5.document.querySelectorAll()
+
+        NOTE: we should know about css selects: universal selector(*), class selector(.), id selector(#), element selector(p, h1, h2, body)
+
+        1. document.getElementById()
+    </script> -->
+
+<!-- 
+    <h1>getElementById in DOM</h1>
+    <p id="mypara">This is my Paragraph</p>
+
+    <img src="" id="myimage" alt="">
+    <script>
+        var res = document.getElementById('mypara')
+        console.log(res);
+
+        var res2 = document.getElementById('myimage');
+        console.log(res2);
+    </script> -->
+
+
+    <!-- <h1>Hi THIS IS JAVASCRIPT</h1>
+    <p>
+        Lorem ipsum dolor sit amet consectetur, adipisicing elit. Iste aspernatur nesciunt amet, eos praesentium vitae ex alias minima quasi enim modi porro laborum commodi eaque quo ut. Nobis, quaerat doloribus!
+    </p> -->
+    <!-- <p id="mypara">
+        <span>Prajwal</span>
+    </p>
+    <script>
+        // var res = document.getElementsByTagName('h1');
+        // var res = document.getElementsByTagName('p');
+
+        // console.log(res);
+
+        var mypele = document.getElementById('mypara');
+        var res = mypele.getElementsByTagName('span');
+        console.log(res);
+    </script>  -->
+  <!-- <div>
+    <p class="mypraj">THIS IS MY PARAG</p>
+  </div>
+  <script>
+    var res = document.getElementsByClassName('mypraj');
+    console.log(res);
+  </script> -->
+<!-- 
+  <div id="show">
+    <p class="myclass">Hi Prajwal</p>
+  </div>
+
+  <script>
+    var myid = document.getElementById('show');
+    var res = myid.getElementsByClassName('myclass')
+    console.log(res);
+  </script> -->
+
+  <!-- <p>
+    <h1>this is my para</h1>
+  </p>
+  <h1 id="myhead">this is my js</h1>
+ -->
+ <!-- <h1 class="myhead">this is my js</h1> -->
+
+  <script>
+    
+    //NOTE: we should know about css selects: universal selector(*), class selector(.), id selector(#), element selector(p, h1, h2, body)
+
+    // var mypara = document.querySelector('p');
+    // var mypara = document.querySelector('h1');
+    // console.log(mypara);
+
+
+    // var res = document.querySelectorAll('#myhead')
+//     var res = document.querySelectorAll('.myhead')
+
+//     console.log(res);
+//   </script>
+
+
+<!-------------------------------------------------------------------->
+
+    <!-- <div class="wrapper">
+        <header class="header">
+            <h1>cat shop</h1>
+        </header>
+        <nav class="main-nav">
+            <ul>
+                <li><a href="#">Home</a></li>
+                <li><a href="#">Service</a></li>
+                <li><a href="#">Contact</a></li>
+            </ul>
+        </nav>
+        <div class="container">
+            <div class="content">
+                <img src="cat.jpg" alt="cat image">
+              <h5>  Lorem ipsum dolor, sit amet consectetur adipisicing elit. Amet sunt qui reprehenderit? Enim laboriosam natus quae tenetur iure est fugiat. Lorem ipsum dolor sit amet consectetur adipisicing elit. Impedit dicta aut pariatur commodi nulla sit! Odio consectetur repudiandae provident placeat labore dignissimos iste, distinctio voluptas suscipit deserunt, dolores consequuntur molestias voluptate cupiditate quisquam quas? Omnis sequi temporibus incidunt error ea, reiciendis tempora fugit obcaecati, aliquam ipsa tempore ut nemo vel.</h5>
+            </div>
+            <div class="right-sidebar">
+                <h1>about us</h1>
+                <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Itaque nostrum illo accusantium nihil veniam? Debitis, laborum! Suscipit quis mollitia voluptates. Lorem, ipsum dolor sit amet consectetur adipisicing elit. Recusandae dolore debitis voluptates unde dolores et facilis illum eligendi amet porro fuga officiis ad culpa iste at veritatis, quos eveniet voluptatum.</p>
+            </div>
+        </div>
+        <footer class="footer">
+            <h4>Copyright &copy; 2023 | Designed by Ameen hasan</h4>
+        </footer>
+
+    </div>
+
+
+    <script>
+       //To fetch all the details of document
+       //console.dir(document)
+    //    console.log(document.title)//cat shop
+    //    document.title = "Dog Shop";
+
+    //    console.log(document.head);
+    // console.log(document.all);
+
+
+    //
+
+    // console.log(document.images);
+    </script> -->
+
+
+<!-- 
+    <h1 id="myid">Hi Ameen</h1>
+    <script>
+        document.getElementById('myid').innerHTML = 'Hi Prajwal';
+    </script> -->
+
+
+
+    <!-- EVENTS: THE ACTION TO WHICH OUR JS RESPONDS ARE CALLED AS EVENTs
+     -->
+     <!-- <button onclick="alert('The Event has triggerd!!!');">Click Me</button> -->
+     <!-- <button onclick="myfunc()">Click Me</button>
+
+     <script>
+        function myfunc(){
+            alert("The funciton has triggered");
+        }
+     </script> -->
+
+
+     <!-- Event Binding -->
+     <!-- <button id="mybtn">Click Me</button> -->
+     <!-- <script>
+        var btn = document.getElementById('mybtn');
+        btn.onclick = function (){alert("Hi Prajwal")};
+     </script> -->
+     <!-- <script>
+        function display(){
+            alert("Hi Prajwal this is normal function");
+        }
+        var btn = document.getElementById('mybtn');
+        btn.onclick = display;
+     </script> -->
+
+
+     <!-- addEventListener()************** -->
+     <button id="mybtn">Click Me</button>
+     <!-- <script>
+        var btn = document.getElementById('mybtn');
+        btn.addEventListener("click",function (){alert("Hi this is event");});
+     </script> -->
+     <!-- <script>
+     
+        function show(){
+            alert("This is normal function!!");
+        }
+        var btn = document.getElementById('mybtn');
+        btn.addEventListener('click', show);
+     </script> -->
+<!-- 
+    mouse event: onclick, mousehover,mouseout,mouseleave,mousemove,mousedow,mouseup,click,dblchick, -->
+
+    <!-- KEYBORD EVENT: keydown,keyup,keypress -->
+
+
+
+    <!-- Focuse and BLUR -->
+    <label>username</label><input type="text" id="myinp">
+    <script>
+        var txt = document.getElementById('myinp');
+        function fe(e){
+            txt.style.backgroundColor = 'orange';
+        }
+        txt.addEventListener('focus',fe);
+
+
+        function be(e){
+            txt.style.backgroundColor = 'white';
+        }
+        txt.addEventListener('blur',be);
+    </script>
+    </body>
+</html>
