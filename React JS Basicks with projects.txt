@@ -1,0 +1,518 @@
+Pre requisite: Nodejs.org(download) >>npm -v or node -v
+
+React JS
+it is a javascrip library for building front-end-application
+*it allows us to create reusable UI components
+
+Advantage:
+1.reusable
+2.open source(free avaialbe)
+3.efficent and fast
+4. large community
+
+//To create React app
+>>npx create-react-app myapp
+
+//Components it is building block of react app
+/*
+1. Function base component
+a. Fat Arrow Function(ES6)
+b. Noram function componet 
+2.Class component
+*/
+
+Function Base componet
+//Function base componet
+Studnent.js
+import React from "react";
+function Student(){
+ return <h1>This is FBC,Hiii</h1>
+}
+
+export default Student;
+
+index.js
+import React from "react";
+import ReactDOM from "react-dom";
+import Student from "./Student";
+
+ReactDOM.render(<Student/>,document.getElementById("root"));
+
+#--------------
+//Function base componet(fat Arrow functino-ES6)
+import React from "react";
+const Student = () =>{
+ return <h1>This is FBC --fat arrow function componet,Hiii</h1>
+}
+
+export default Student;
+
+index.js
+import React from "react";
+import ReactDOM from "react-dom";
+import Student from "./Student";
+
+ReactDOM.render(<Student/>,document.getElementById("root"));
+
+#---------------------
+React Fragment
+//Class base component
+import React, {Component} from "react";
+class Student extends Component{
+    render(){
+        return <React.Fragment>
+        <h1>Hello</h1> 
+        <h2>This is prajwal</h2>
+        <p>THIS IS CLASS BASED COMPONET SJDKFJLKSDJLFJDSL</p>
+        </React.Fragment>
+    }
+}
+
+export default Student;
+
+method 2:
+//Class base component
+import React, {Component} from "react";
+class Student extends Component{
+    render(){
+        return <>
+        <h1>Hello</h1> 
+        <h2>This is prajwal</h2>
+        <p>THIS IS CLASS BASED COMPONET SJDKFJLKSDJLFJDSL</p>
+        </>
+    }
+}
+
+export default Student;
+
+#------------------------
+
+props: making FBC or CBC as dynamic, we use props to make variable more dynamic-
+//normal function base componetn using props
+import React from "react";
+function Student(props){
+     return <>
+     <h1>Hi, {props.name}</h1>
+     </>
+}
+
+export default Student;
+
+index.js
+import React from "react";
+import ReactDOM from "react-dom";
+import Student from "./Student";
+
+ReactDOM.render(<Student name="Alen" />,document.getElementById("root"));
+
+
+#----------
+//Fat Arrow coponent
+import React from "react";
+const Student = (props) =>{
+    return <>
+    <h1>Hey This is {props.name} and my roll no is {props.roll} and class is {props.myclas}</h1>
+    </>
+}
+
+export default Student;
+
+
+index.js
+import React from "react";
+import ReactDOM from "react-dom";
+import Student from "./Student";
+
+ReactDOM.render(<Student name={"Alen"} roll ={100+2} myclas="BE" />,document.getElementById("root"));
+
+
+#------------------
+//passing props in CBC
+import React, {Component} from "react";
+
+class Student extends Component{
+    render(){
+        return <>
+        <h1>Hi This is {this.props.name} and roll no is {this.props.roll} and class is {this.props.myclas}</h1>
+        </>
+    }
+}
+
+export default Student;
+
+
+#-------------
+
+Composing Component
+App.js
+import React, {Component} from "react";
+import Student from "./Student";
+import Navbar from "./Navbar";
+class App extends Component{
+    render(){
+        return<>
+        <h1>This is Class Based Component!!</h1>
+
+        {/* Composing Component in React JS */}
+            <Navbar />
+            <Student />
+            <Navbar />
+            <Student />
+        </>
+    }
+}
+
+export default App;
+
+Student.js
+import React, {Component} from "react";
+
+class Student extends Component{
+    render(){
+        return <>
+        <h2>Hey I am on Student Component </h2>
+        </>
+    }
+}
+
+export default Student;
+
+Navbar.js
+import React from "react";
+function Navbar(){
+    return <h1>tHIS IS NAVBAR!</h1>
+}
+
+
+export default Navbar;
+
+
+index.js
+import React from "react";
+import ReactDOM from "react-dom";
+import App from "./App";
+
+ReactDOM.render(<App />,document.getElementById("root"));
+
+
+
+#---------------------------------
+
+FBC vs CBC
+
+FBC dosn't supports State propert of react js, but we can acieve same using HOOKS!
+CBC supports State Property of react js
+
+
+
+#Children in React JS
+
+Student.js
+import React from "react";
+function Student(props){
+    return <>
+    <h1>CHILD:{props.children}</h1>
+    </>
+}
+export default Student;
+
+index.js
+import React from "react";
+import ReactDOM from "react-dom";
+import Student from "./Student"
+
+ReactDOM.render(<Student>Hi I am child!!</Student>,document.getElementById("root"));
+
+
+/*
+State: state is similar to props, but it is private and fully controlled by the component
+*we can create state only in class  Component
+*State are Mutable(update/modify)
+
+
+
+There are 2 way to write states
+1. Directly inside class
+2. Inside the constructor
+*/
+
+Student.js
+//1.crating state Directly inside class
+import React, {Component} from "react";
+class Student extends Component{
+
+    state = {
+        name: "Prajwal",
+        roll : "102",
+        myclass : this.props.myclass
+    }
+    render(){
+        return <>
+        <h1>My name is {this.state.name} and roll no is {this.state.roll} and myclass is {this.state.myclass}</h1>
+        </>
+    }
+}
+
+export default Student;
+
+index.js
+import React from "react";
+import ReactDOM from "react-dom";
+import Student from "./Student"
+
+ReactDOM.render(<Student myclass="BE" />,document.getElementById("root"));
+
+#------
+//1.crating state, Inside the Constructor
+import React, {Component} from "react";
+class Student extends Component{
+
+    constructor(props){
+        super(props);
+        this.state = {
+            name: "Prajwal",
+            roll: "101",
+            myclass: this.props.myclass
+        }
+    }
+    render(){
+        return <>
+        <h1>My name is {this.state.name} and roll no is {this.state.roll} and myclass is {this.state.myclass}</h1>
+        </>
+    }
+}
+
+export default Student;
+
+
+
+#------------EVENT HANDLING---------
+/*
+EVENT: The action to which JS responds is called as Event"
+
+* clicking an element
+* Submitting a form
+* Scrollling page
+* Hovering an element
+*navigating to other page
+
+
+
+In HTML,
+<button onclick="funk()" > click me </button>
+function fuck(){
+    console.log("Button clicked")
+}
+
+
+In React js,
+FBC:-
+<button onClick={handleClick} > click me </button>
+CBC:-
+<button onClick={this.handleClick} > click me </button>
+
+*/
+
+//CLASS BASED COMPONENT
+//CBC event handling
+import React, {Component} from "react";
+
+class Student extends Component{
+    handleClick = () =>{
+        console.log("Button clicked!!!");
+    }
+    render(){
+        return<>
+        <button onClick={this.handleClick} >click me!!</button>
+        </>
+    }
+}
+
+export default Student;
+
+
+Method 2:
+//CBC
+import React, {Component} from "react";
+class Student extends Component{
+    constructor(props){
+        super(props);
+        this.state = {
+            name:"Prajwal"
+        }
+    }
+
+    handleClick = () =>{
+        console.log("Button clicked");
+        console.log(this.state.name);
+    }
+
+    render(){
+        return <>
+        <button onClick={this.handleClick} >clcik me!!</button>
+        </>
+    }
+}
+
+export default Student;
+#-------
+
+
+Update State using setState method
+//setState: it is a method used to update the state
+/*
+syntax:
+this.state = {
+    name:"prajwal"
+}
+this.setState({name:"Ameen"})
+*/
+import React, {Component} from "react";
+class Student extends Component{
+    constructor(props){
+        super(props);
+        this.state = {
+            name:"Prajwal"
+        }
+    }
+
+    handleClick = () =>{
+        console.log("Button clicked");
+        this.setState({name:"Ameen"});
+    }
+
+    render(){
+        return <>
+        <h1>Hiiiii {this.state.name}</h1>
+        <button onClick={this.handleClick} >clcik me!!</button>
+        </>
+    }
+}
+
+export default Student;
+
+
+#-----------------------------
+//Passing Arguments to Event Handler
+import React, {Component} from "react";
+
+class Student extends Component{
+    state = {
+        id : 1
+    }
+    handleId = (id) =>{
+        console.log(id)
+        console.log("Button clicked!")
+    }
+    handleClickArg = () =>{
+        this.handleId(this.state.id);
+    }
+    render(){
+        return <>
+        <button onClick={this.handleClickArg}>Click me</button>
+        </>
+    }
+}
+
+export default Student;
+
+
+
+#--------
+/*
+HOOKS: are the functions/methos that acts similar to state 
+Hooks are used in FBC, to achick State property
+
+
+Ther are 2 type:
+1.useState
+2.useEffect
+
+when to use hooks?
+if we are writing function compoent and realize we need to add some state the we go with hook
+
+
+
+Rules of Hooks
+1. only call hook in top level=> we can't use hook inside loops., conditions or nested function
+2. hooks don't work inside class
+
+
+1.useState():-  it is a hook that allows you to add state in FBC
+*useState return a pair, that is current sate value and function that lets you to update it
+
+
+
+*/
+
+
+import React, {useState} from "react";
+function Student(){
+    // const myval = useState("Prajwal")
+    const [name, setName] = useState("Prajwal");
+    
+    const handleClick = () =>{
+        setName("Pruthvi Prema")
+    }
+    return <>
+    <h1>Hi {name}</h1>
+    <button onClick={handleClick}>click me </button>
+    </>
+}
+
+export default Student;
+
+
+#---
+useEffect: is it a hook function, that only triggers of some changes happen in useState method?
+import React, {useEffect, useState} from "react";
+function Student(){
+    // const myval = useState("Prajwal")
+    const [name, setName] = useState("Prajwal");
+    
+    const handleClick = () =>{
+        setName("Pruthvi Prema")
+    }
+
+    useEffect(()=>{
+        console.log("some changes happend!!")
+    })
+    return <>
+    <h1>Hi {name}</h1>
+    <button onClick={handleClick}>click me </button>
+    </>
+}
+
+export default Student;
+
+
+
+#MINI PROJECT: CONTER APPLICATON
+
+//Counter project
+import React, { useState } from "react";
+function Student(){
+    const [count,setCount] = useState(0);
+    const handleInc = () =>{
+        setCount(count + 1);
+    }
+    const handleDec = () =>{
+        setCount (count - 1);
+    }
+    return<>
+       <div>
+        <center>
+            <h1>Counter Application</h1>
+            <h3>Count: {count}</h3>
+            <button onClick={handleInc}>Increment</button>
+            <button onClick={handleDec}> Decrement</button>
+        </center>
+       </div>
+    </>
+}
+
+export default Student;
+
+
+
+
