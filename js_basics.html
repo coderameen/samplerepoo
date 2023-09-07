@@ -892,6 +892,54 @@ var str = "Hi Prajwal how is javascript";
 
     */
 
+/*
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <h1>Deep Copy</h1>
+    <p>The values that are copied `to the new variable are actually copied and disconnected fromt the original variable. Basically it means that, any changes in new variable should not effect the original variable</p>
+    <h1>Shallow Copy</h1>
+    <p>The value of new variable will stay connet with the original variable, if we try to change new varialble value it will effect the original varialble</p>
+
+<script>
+    //objects Deep and Shallow Copy
+    var person1 = {
+        name:'prajwal',
+        age:25
+    }
+    console.log(person1);
+    // console.log(person1.name);
+
+    //shallow copy
+    // var person2 = person1;
+    // console.log(person2);
+    // person2.name = 'ameen';
+    // console.log(person2);
+    // console.log(person1);
+
+    //deep copy
+    var person2 = {...person1};
+    console.log(person2)
+    person2.name = 'ameen';
+    console.log(person1)
+
+
+
+    //Arrays Deep and Shallow Copy
+    var arr1 = [1,2,3,4,5]
+    var arr2 = arr1
+    console.log(arr2)
+</script>
+</body>
+</html>
+
+*/
+
 
 </script>
 </body>
